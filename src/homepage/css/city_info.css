@@ -1,0 +1,221 @@
+.city-info {
+    width: 91vw;
+    display: flex;
+    flex-direction: column; /* Column for responsiveness */
+    align-items: center; /* Center aligns the content */
+    margin: 20px auto;
+    padding: 20px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    background-color: #A8DADC;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.city-description {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.city-description h3 {
+    font-size: 1.5rem;
+    color: #444;
+    text-align: left;
+}
+
+.city-description p {
+    padding: 10px;
+    font-size: 1rem;
+    color: #1D3557;
+    text-align: justify;
+}
+
+.city-gallery {
+    display: flex;
+    flex-wrap: wrap; /* Makes gallery responsive */
+    gap: 10px; /* Space between images */
+    justify-content: space-around;
+    width: 100%;
+}
+
+.city-image {
+    width: 25%; /* 25% width for 4 images per row */
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    object-fit: cover;
+}
+.big-box{
+    background-color: #A8DADC;
+}
+/* Container for buttons to be aligned side by side */
+.buttons-container {
+    display: flex;
+    margin-top: 10px;
+    gap: 10px; /* Adds space between buttons */
+}
+
+/* Container for buttons to be aligned side by side */
+.buttons-container {
+    display: flex;
+    margin-top: 10px;
+    gap: 10px; /* Adds space between buttons */
+}
+
+/* Base styling for both buttons */
+.review-button {
+    padding: 10px 20px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    color: #fff; /* White text */
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+/* "Add Review" button - pastel red */
+.add-review-button {
+    background-color: #F28B82; /* Soft red */
+}
+
+.add-review-button:hover {
+    background-color: #E57373; /* Slightly darker pastel red on hover */
+}
+
+/* "See Reviews" button - pastel yellow */
+.see-reviews-button {
+    background-color: #FEE780; /* Soft yellow */
+}
+
+.see-reviews-button:hover {
+    background-color: #FDD835; /* Slightly darker pastel yellow on hover */
+}
+/* Styling for the Review Box */
+.review-box {
+    width: 100%;
+    max-width: 500px;
+    background-color: #c2bdbd;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    transition: all 0.3s ease-in-out;
+}
+
+.review-box:hover {
+    transform: scale(1.02);
+}
+
+/* Styling for the Textarea */
+.review-box textarea {
+    width: 95%;
+    height: 120px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    resize: none;
+    outline: none;
+    transition: all 0.2s ease;
+}
+
+.review-box textarea:focus {
+    border-color: #4CAF50;
+    box-shadow: 0 0 5px rgba(0, 128, 0, 0.2);
+}
+
+/* Styling for the Image Input */
+.review-box input[type="file"] {
+    font-size: 16px;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.review-box input[type="file"]:hover {
+    border-color: #4CAF50;
+}
+
+/* Styling for the Submit Button */
+.review-box button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.review-box button:hover {
+    background-color: #45a049;
+}
+
+.review-box button:active {
+    transform: scale(0.98);
+}
+
+/* Adding a container for the "Add Review" label */
+.add-review-label {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+}
+/* Styling for the Reviews Container */
+/* Reviews Container Styling */
+#reviewsContainer {
+    width: 90%;
+    max-width: 800px;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 30px auto; /* Center it on the page */
+    text-align: left;
+}
+
+/* Reviews Heading Styling */
+#heading{
+    font-size: 28px;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Individual Review Styling */
+.review {
+    background-color: #fff;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.review p {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.review-image {
+    width: 100%;
+    max-width: 350px;
+    margin-top: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Message Styling */
+.reviews-container p {
+    font-size: 18px;
+    font-weight: bold;
+    color: #888;
+}

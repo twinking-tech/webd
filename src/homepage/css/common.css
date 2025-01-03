@@ -1,0 +1,58 @@
+.common {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+   
+    background-color: #A8DADC;
+    padding: 20px;
+    margin-top: 20px;
+    width:90vw;
+    margin-left: auto;  /* Centers the div horizontally */
+    margin-right: auto;
+    border-radius: 15px
+}
+.common h2 {
+    margin: 0 0 15px 0; /* Adds space below the heading */
+    font-size: 24px;
+}
+
+.common ul {
+    padding: 0;
+    list-style-type: none; /* Removes the default list bullets */
+    margin: 0;
+}
+
+.common ul li {
+    margin-bottom: 10px; 
+    color: #333; 
+    font-size: 18px;
+    font-weight: bold; 
+}
+
+.common ul li:hover {
+    color: #007BFF; 
+}
+.wishlist {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #A8DADC;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width:90vw;
+    margin-left: auto;  /* Centers the div horizontally */
+    margin-right: auto;
+
+}
+
+.wishlist h2 {
+    margin-bottom: 10px;
+    font-size: 20px;
+    
+}
+
+.wishlist-item {
+    margin: 5px 0;
+    font-size: 16px;
+    font-weight: bold;
+
+}

@@ -1,0 +1,62 @@
+.wishlist-button {
+    background-color: #FFD1DC; /* Pastel pink */
+    color: #000; /* Black text for readability */
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    margin-left: 3%;
+    position: relative;
+    margin-bottom:3%;
+    z-index: 0;
+    position: absolute;
+    top: 52%;
+}
+
+.wishlist-button:hover {
+    background-color: #FFB7C5; /* Slightly darker pastel pink on hover */
+    transform: scale(1.05); /* Slight zoom effect */
+}
+
+.wishlist-button:active {
+    background-color: #FFA3B0; /* Even darker pastel pink when clicked */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+/* Wishlist Dropdown Styling */
+.wishlist-container {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    z-index: 1000;
+    display: none;
+    width: 200px;
+    max-height: 300px;
+    overflow-y: auto;
+    border-radius: 5px;
+}
+
+.wishlist-container.hidden {
+    display: none;
+}
+
+.wishlist-container div {
+    padding: 5px;
+    font-size: 14px;
+    border-bottom: 1px solid #ddd;
+}
+
+.wishlist-container div:last-child {
+    border-bottom: none;
+}
+
+.wishlist-container div:hover {
+    background-color: #f0f0f0;
+    cursor: pointer;
+}

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Voyage Verse Currency Converter</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f8f1f1; /* Soft pastel pink */
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 50px auto;
+      padding: 20px;
+      background: #fff; /* White background for contrast */
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #5d5c61; /* Soft grey for heading */
+    }
+
+    .converter {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    input, select, button {
+      padding: 12px;
+      font-size: 1rem;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      outline: none;
+    }
+
+    select, input {
+      background-color: #f7e6e6; /* Soft pastel pink */
+    }
+
+    button {
+      background-color: #93b5c6; /* Soft pastel blue */
+      color: white;
+      border: none;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    button:hover {
+      background-color: #6d9fa1; /* Slightly darker pastel blue */
+    }
+
+    .result {
+      margin-top: 20px;
+    }
+
+    #converted-amount {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #5d5c61; /* Soft grey for result text */
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Welcome to Voyage Verse Currency Converter</h1>
+    <div class="converter">
+      <input type="number" id="amount" placeholder="Enter amount" />
+      <select id="from-currency">
+        <option value="USD">USD - US Dollar</option>
+        <option value="EUR">EUR - Euro</option>
+        <option value="INR">INR - Indian Rupee</option>
+        <option value="GBP">GBP - British Pound</option>
+        <option value="AUD">AUD - Australian Dollar</option>
+        <option value="CAD">CAD - Canadian Dollar</option>
+        <option value="JPY">JPY - Japanese Yen</option>
+        <option value="CNY">CNY - Chinese Yuan</option>
+        <option value="CHF">CHF - Swiss Franc</option>
+        <option value="SGD">SGD - Singapore Dollar</option>
+      </select>
+      <span>to</span>
+      <select id="to-currency">
+        <option value="USD">USD - US Dollar</option>
+        <option value="EUR">EUR - Euro</option>
+        <option value="INR">INR - Indian Rupee</option>
+        <option value="GBP">GBP - British Pound</option>
+        <option value="AUD">AUD - Australian Dollar</option>
+        <option value="CAD">CAD - Canadian Dollar</option>
+        <option value="JPY">JPY - Japanese Yen</option>
+        <option value="CNY">CNY - Chinese Yuan</option>
+        <option value="CHF">CHF - Swiss Franc</option>
+        <option value="SGD">SGD - Singapore Dollar</option>
+      </select>
+      <button id="convert-button">Convert</button>
+    </div>
+    <div class="result">
+      <h2>Converted Amount:</h2>
+      <p id="converted-amount"></p>
+    </div>
+  </div>
+
+  <script>
+    const API_KEY = 'fca_live_URHvPKJd3wrMTFWjo3ABKIIGa7mpxkPJ2CotINDO';
+    const BASE_URL = 'https://api.freecurrencyapi.com/v1/latest';
+
+    document.getElementById('convert-button').addEventListener('click', async () => {
+      const amount = document.getElementById('amount').value;
+      const fromCurrency = document.getElementById('from-currency').value;
+      const toCurrency = document.getElementById('to-currency').value;
+
+      if (!amount || isNaN(amount)) {
+        alert('Please enter a valid amount.');
+        return;
+      }
+
+      try {
+        const response = await fetch(`${BASE_URL}?apikey=${API_KEY}&base_currency=${fromCurrency}`);
+        const data = await response.json();
+        const rates = data.data;
+
+        if (!rates[toCurrency]) {
+          alert('Currency not supported.');
+          return;
+        }
+
+        const convertedAmount = (amount * rates[toCurrency]).toFixed(2);
+        document.getElementById('converted-amount').innerText = `${convertedAmount} ${toCurrency}`;
+      } catch (error) {
+        console.error('Error:', error);
+        alert('Failed to fetch conversion rate. Please try again later.');
+      }
+    });
+  </script>
+</body>
+</html>

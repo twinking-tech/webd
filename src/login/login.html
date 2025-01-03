@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login/Register</title>
+    <link rel="stylesheet" type="text/css" href="../login/login.css">
+    <script type="module" src="../login/firebaseauth.js"></script>
+</head>
+<body>
+  <div class="flex">
+    <div class="container" id="signup" style="display: none;">
+        <div class="loginBox">
+          <h1 class="logo">VOYAGE <span class="glow">VERSE</span></h1>
+          <h2>REGISTER YOUR ACCOUNT</h2>
+          <button class="googleBtn"><img src=../images/icons8-google-48.png>Signup with Google</button>
+          <div class="divider">
+            <span>or</span>
+          </div>
+          <form method="post" action="">
+            <div id="signUpMessage" class="messageDiv" style="display:none;"></div>
+            <input type="text" placeholder="First Name" id="fName" writingsuggestions="true" required>
+            <input type="text" placeholder="Last Name" id="lName" writingsuggestions="true" required>
+            <input type="email" placeholder="Email Address" id="rEmail" writingsuggestions="true" required>
+            <input type="password" placeholder="Password" id="pw" writingsuggestions="true" required>
+            <div class="options">
+              <label>
+                <input type="checkbox" placeholder="Remember me"  writingsuggestions="true"> Remmember me</input>
+              </label>
+            </div>
+            <button type="button" id="register-btn">REGISTER</button>
+          </form>
+          <p>Already have an account? <a href="#" id="show-login">Log in</a></p>
+        </div>
+    </div>
+
+    <div class="container" id="signIn">
+        <div class="loginBox">
+          <h1 class="logo">VOYAGE <span class="glow">VERSE</span></h1>
+          <h2>WELCOME BACK</h2>
+          <button class="googleBtn"><img src=../images/icons8-google-48.png>Log in with Google</img></button>
+          <div class="divider">
+            or
+          </div>
+          <form method="post" action="">
+            <div id="signInMessage" class="messageDiv" style="display:none;"></div>
+            <input type="email" placeholder="Email Address" id="email"  writingsuggestions="true" required><br>
+            <input type="password" placeholder="Password" id="psw" writingsuggestions="true" required><br>
+            <div class="options">
+              <label>
+                <input type="checkbox" placeholder="Remember me"> Remmember me</input>
+              </label>
+            </div>
+            <button type="button" id="login-btn">LOG IN</button>
+          </form>
+          <p>Don't have an account? <a href="#" id="show-register">Create new account</a></p>
+        </div>
+    </div>
+  </div>
+    <script src="../login/login.js"></script>
+</body>
+</html>

@@ -1,0 +1,157 @@
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    /* background: linear-gradient(to right, #d4fc79, #96e6a1, #ffecd2, #fcb69f); */
+    background: url(../images/login.jpg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  /* .flex {
+    display: flex;
+    justify-content: center;
+    justify-content: flex-start; /* Aligns content to the left */
+    /* align-items: center;
+    width: 75%;
+    height: 75%;
+    background: url(./mountain.jpg);
+    background-size: cover; /* Ensures the image covers the entire box */
+    /* background-position: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow for elevation */
+    /* border-radius: 15px; /* Rounded corners */
+  /* }  */
+  
+  .container {
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 10px;
+    justify-content: center; /* Center horizontally */
+    background-size: cover; /* Ensures the image covers the entire box */
+  background-position: center;
+    padding: 20px;
+    width: 350px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
+    text-align: center;
+  }
+  .googleBtn {
+    display:inline-flex;
+    align-items: center; /* Align items vertically in the center */
+    justify-content: center; /* Align content horizontally in the center */
+    gap: 20px; /* Add space between the logo and the text */
+    padding: 10px 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: rgb(186, 225, 255);
+    font-size: 20px;
+    cursor: pointer;
+    color:rgb(252, 17, 80);text-shadow: 0 1px 2px black;
+  
+     
+}
+span{
+  color: green;
+}
+.googleBtn:hover{
+  background-color: #cbdcef;
+}
+form input[type="email"],
+form input[type="password"],
+form input[type="text"] {
+    width: 90%; 
+    padding: 10px; 
+    margin: 10px 0; 
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
+    font-size: 16px; 
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1); 
+    outline: none; /* Remove default outline */
+    transition: all 0.3s ease-in-out; /* Smooth transition for hover and focus states */
+}
+
+form input[type="email"]:focus,
+form input[type="password"]:focus,
+form input[type="text"]:focus {
+  width:95%;
+    border-color: #007BFF; 
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); 
+}
+
+form input[type="email"]::placeholder,
+form input[type="password"]::placeholder,
+form input[type="text"]::placeholder {
+    font-style: italic; 
+    color: #999;
+}
+
+form button {
+    width: 95%; 
+    padding: 10px;
+    margin-top: 15px;
+    background-color: #007BFF; 
+    color: #fff; 
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out; /* Smooth hover transition */
+}
+
+form button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
+form button:active {
+    transform: scale(0.98); /* Slight press effect */
+}
+
+.googleBtn img {
+    width: 30px; 
+    height: 30px;
+}
+
+  p {
+    margin-top: 15px;
+    font-size: 14px;
+  }
+  
+  p a {
+    color: #007BFF;
+    text-decoration: none;
+  }
+  
+  p a:hover {
+    text-decoration: underline;
+  }
+  .options {
+    display: flex;
+    align-items: center; /* Align checkbox and text vertically */
+    justify-content: flex-start; /* Align the content to the left */
+    gap: 5px; /* Add space between the checkbox and the label text */
+    margin: 10px 0; /* Add spacing above and below the section */
+}
+
+.options input[type="checkbox"] {
+    width: 16px; 
+    height: 16px;
+    margin: 0; /* Remove any default margins */
+    cursor: pointer; /* Pointer cursor for better UX */
+}
+
+.options label {
+    font-size: 14px; 
+    color: #333; 
+}
+.messageDiv{
+  background-color:hsl(327,90%,28%);
+  color:white;
+  padding:10px 20px;
+  margin:10px;
+  border-radius: 5px;
+  font-size:1rem;
+  opacity:0;
+  animation:fadeOut 7s forwards;
+
+}

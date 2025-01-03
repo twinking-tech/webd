@@ -1,0 +1,32 @@
+.menu {
+    z-index: 2;
+    position: fixed;
+    top: 0;
+    background-color: #FADCD9 ;
+    left: -250px; /* Initially hidden off the screen */
+    width: 250px;
+    height: 100%;
+    
+    padding-top: 60px; /* Space for the logo */
+    transition: left 0.3s ease; /* Smooth transition */
+}
+.menu ul {
+    list-style-type: none;
+    padding: 0;
+}
+.menu ul li {
+    padding: 15px;
+    text-align: center;
+    color: #3D5A80;
+}
+.menu ul li a {
+    color: #3D5A80;
+    text-decoration: none;
+    font-size: 18px;
+}
+.menu ul li a:hover {
+    color: #007BFF;
+}
+.menu.open {
+    left: 0; /* Move the menu into view */
+}
